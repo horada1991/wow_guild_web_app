@@ -12,9 +12,9 @@ def home():
 @app.route('/api/news', methods=['GET'])
 def get_news():
     news_handler = NewsHandler()
-    news_json = [news.serialize() for news in news_handler.get_all_entry()]
+    news_json = [news.convert_object_to_dict() for news in news_handler.get_all_entry()]
     response = jsonify({'news': news_json})
     return response
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', debug=True)
