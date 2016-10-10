@@ -23,12 +23,18 @@
     <div class="row">
         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12" id="left_container">test left</div>
         <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12" id="middle_container">
-            <div class="row">
-                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-                    <button id="add-news-btn" class="btn btn-primary btn-md" data-toggle="modal" data-target="#newsModal" type="button">
-                        Add news
-                    </button>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <button id="add-_news_btn" class="btn btn-primary btn-md" data-toggle="modal"
+                                data-target="#newsModal" type="button">
+                            Add news
+                        </button>
+                    </div>
                 </div>
+            </div>
+            <div class="container" id="news_block">
+                <!--Add news here with JS-->
             </div>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12" id="right_container">test right</div>
@@ -47,14 +53,15 @@
                 <h4 class="modal-title">Adding news</h4>
             </div>
             <div class="modal-body">
-                    <div class="form-group">
-                        <label for="news_title">Title:</label>
-                        <input type="text" class="form-control" id="news_title">
-                    </div>
-                    <div class="form-group">
-                        <label for="news_body">News content:</label>
-                        <textarea id="news_body" class="form-control custom-control" rows="3" style="resize:none"></textarea>
-                    </div>
+                <div class="form-group">
+                    <label for="news_title">Title:</label>
+                    <input type="text" class="form-control" id="news_title">
+                </div>
+                <div class="form-group">
+                    <label for="news_body">News content:</label>
+                    <textarea id="news_body" class="form-control custom-control" rows="3"
+                              style="resize:none"></textarea>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -67,6 +74,8 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="/static/js/bootstrap.js"></script>
+<script type="text/javascript" src="/static/js/functions.js"></script>
+<script type="text/javascript" src="/static/js/index_run.js"></script>
 
 </body>
 
