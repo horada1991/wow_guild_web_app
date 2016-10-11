@@ -4,8 +4,10 @@ function listNews (newsList) {
     $.each(newsList, function (index, news) {
         var $newsContainer = $('<div></div>').addClass('panel panel-default').attr('id', 'news_container');
         var $panelHeading = $('<div></div>').addClass('panel-heading').attr('id', 'news_panel-header');
-        $('<h4>' + news.title + '</h4>').appendTo($panelHeading);
-        $('<p>' + news.timestamp + '</p>').appendTo($panelHeading);
+        var $panelHeadingRow = $('<div></div>').addClass('row')
+        $('<div>' + news.title + '</div>').addClass('col-md-6 col-lg-6 col-sm-6 col-xs-6').appendTo($panelHeadingRow);
+        $('<div>' + news.timestamp + '</div>').addClass('col-md-6 col-lg-6 col-sm-6 col-xs-6 text-right').appendTo($panelHeadingRow);
+        $panelHeadingRow.appendTo($panelHeading);
         $panelHeading.appendTo($newsContainer);
 
         var $bodyContainer = $('<div></div>').addClass('container').attr('id', 'news_body_container');
