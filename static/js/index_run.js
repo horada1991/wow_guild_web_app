@@ -1,11 +1,8 @@
 $(document).ready(function () {
     // write out all news
-    $.getJSON('/api/news', function (response) {
-        listNews(response)
-    });
+    listNews()
     
     // clicking on add new news on the home page:
-    $('#add_news_btn').click(function () {
-        
-    });
+
+    $('#save_news_btn').click(saveNews);
 });
